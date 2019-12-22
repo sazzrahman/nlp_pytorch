@@ -2,7 +2,7 @@ import json
 import torch
 import pandas as pd
 from torch.utils.data import Dataset
-from .custom_vectorizer import SurnameVectorizer
+from custom_vectorizer import SurnameVectorizer
 
 
 

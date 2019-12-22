@@ -1,5 +1,5 @@
 import numpy as np
-from .custom_vocab import Vocabulary
+from custom_vocab import Vocabulary
 
 
 class SurnameVectorizer(object):
