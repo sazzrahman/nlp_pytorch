@@ -24,6 +24,12 @@ class Vocabulary(object):
 
     @classmethod
     def from_serializable(cls, content):
+        """
+        input_dict must contain keys:
+         token_to_index,
+         add_unk,
+         unk_token
+        """
         return cls(**content)
 
     def add_token(self, token):
@@ -54,7 +60,10 @@ class Vocabulary(object):
         return self._idx_to_token[idx]
 
     def __str__(self):
-        pass
+        """
+        this will call the __len__ method
+        """
+        return f"<Vocabulary>(size={len(self)})"
 
     def __len__(self):
         return len(self._token_to_index)
