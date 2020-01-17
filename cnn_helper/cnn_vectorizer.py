@@ -10,7 +10,7 @@ class SurnameVectorizer(object):
 
     def vectorize(self, surname):
         # only surname needs to be vectorized
-        one_hot_matrix_size = (len(self.surname_vocab), len(self._max_surname_length))
+        one_hot_matrix_size = (len(self.surname_vocab), self._max_surname_length)
         one_hot_matrix = np.zeros(one_hot_matrix_size, dtype=np.float32)
 
         # traverse the matrix
